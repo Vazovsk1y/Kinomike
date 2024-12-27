@@ -1,0 +1,102 @@
+﻿@import "reset.css";
+@import "shared.css";
+
+.main-content{
+    flex-direction: row;
+}
+
+.filters-container h2{
+    color: white;
+    font-size: 28px;
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 100px;
+    position: sticky;
+    /*overflow-y: auto; !* Прокрутка внутри блока, если фильтров много *!*/
+}
+
+.cards-container{
+    flex: 1;
+}
+
+:root {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: white;
+    --select-bg: rgba(255, 255, 255, 0.2);
+}
+
+.filters-container select {
+    appearance: none;
+    min-width: 250px;
+    min-height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, #444444;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    &::-ms-expand {
+        display: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    option {
+        color: inherit;
+    }
+}
+
+.card{
+    justify-content: stretch;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card:hover{
+    transition: all 0.35s ease;
+    background: #555555;
+}
+
+.card:hover span{
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.card-info{
+    gap: 10px;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-info h3{
+    color: white;
+    font-size: 18px;
+}
+
+.card-info p{
+    font-size: 12px;
+    color: white;
+}
+
+.card-info span{
+    display: block;
+    font-size: 12px;
+    color: #555555;
+}
+
+.card-cover{
+    width: 72px;
+    height: 108px;
+}
+
+.card-right{
+    align-items: center;
+}

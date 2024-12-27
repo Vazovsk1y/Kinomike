@@ -1,0 +1,79 @@
+﻿@import "shared.css";
+@import "reset.css";
+
+.group {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.group-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    align-self: self-start;
+    background: transparent;
+}
+
+.group-slider {
+    gap: 10px;
+}
+
+.items-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.group-items-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.group-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+}
+
+.cover-container img,
+.cover-info {
+    width: 150px;
+    height: 235px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cover-info {
+    display: flex;
+    top: 0;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+}
+
+.cover-container:hover {
+    transition: 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cover-container:hover .cover-info {
+    opacity: 1;
+}
+
+.item-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #d9d7e0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.item-title:hover {
+    color: white;
+    transition: all 0.25s ease;
+}
